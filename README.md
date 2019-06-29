@@ -2,7 +2,7 @@
 
 Colorizer is a simple web page that displays random hex colors. You can pause and resume the cycyle by pressing the play/pause button.
 
-[Demo](https://mattrmay.github.io/colorizer/)
+<a href="https://mattrmay.github.io/colorizer/" target="_blank">Demo</a>
 
 ### Usage
 
