@@ -13,10 +13,10 @@ cycleColors(runState);
 $(playStatusButton).click(function() {
     if (runState === true) {
         runState = false;
-        cycleState('Pause')
+        cycleState(runState)
     } else {
         runState = true;
-        cycleState('Resume');
+        cycleState(runState);
     } 
     cycleColors(runState);
 });
@@ -46,7 +46,7 @@ function randomHex() {
 
 function cycleColors(instructions) {
     if (instructions) {
-        console.log('Play');
+        console.log('Resume');
         colorShow = setInterval(function() {
 
             let nextColor = randomHex();
@@ -65,9 +65,9 @@ function cycleColors(instructions) {
 }
 
 function cycleState(status) {
-    if(status === 'Resume') {
-        document.getElementById('playStatusButton').innerHTML = status;
-    } else if(status === 'Pause') {
-        document.getElementById('playStatusButton').innerHTML = status;
+    if(status) {
+        document.getElementById('playStatusButton').innerHTML = 'Pause';
+    } else {
+        document.getElementById('playStatusButton').innerHTML = 'Resume';
     }
 }
