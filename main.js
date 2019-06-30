@@ -50,7 +50,7 @@ function cycleColors(instructions) {
         colorShow = setInterval(function() {
 
             let nextColor = randomHex();
-
+            console.log(nextColor);
             document.getElementById('hexColor').innerHTML = nextColor;
 
             $('body').animate({
