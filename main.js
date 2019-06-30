@@ -1,5 +1,5 @@
 let defaultColor = randomHex();
-
+logColor(defaultColor);
 document.body.style.backgroundColor = defaultColor;
 
 document.getElementById('hexColor').innerHTML = defaultColor;
@@ -21,6 +21,10 @@ $(playStatusButton).click(function() {
     cycleColors(runState);
 });
 
+
+function logColor(color) {
+    console.log("%c"+color, "background-color: "+color+"; color: #fff; text-shadow: 1px 1px 3px #555; font-size: 18px; padding: 5px 10px;");
+}
 
 
 function randomHex() {
@@ -50,7 +54,7 @@ function cycleColors(instructions) {
         colorShow = setInterval(function() {
 
             let nextColor = randomHex();
-            console.log(nextColor);
+            logColor(nextColor);
             document.getElementById('hexColor').innerHTML = nextColor;
 
             $('body').animate({
