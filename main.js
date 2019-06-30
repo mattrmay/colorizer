@@ -17,7 +17,8 @@ $(playStatusButton).click(function() {
     } else {
         runState = true;
         cycleState(runState);
-    } 
+    }
+    console.log(runState ? "Resume" : "Pause");
     cycleColors(runState);
 });
 
@@ -50,7 +51,6 @@ function randomHex() {
 
 function cycleColors(instructions) {
     if (instructions) {
-        console.log('Resume');
         colorShow = setInterval(function() {
 
             let nextColor = randomHex();
@@ -63,7 +63,6 @@ function cycleColors(instructions) {
 
         }, 2000);
     } else {
-        console.log('Pause');
         clearInterval(colorShow)
     }
 }
