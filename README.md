@@ -8,6 +8,10 @@ Colorizer is a simple web page that displays random hex colors. You can pause an
 
 To use this app, simply download the source files and open ```index.html```.
 
+#### Review previous colors
+
+To review previously displayed colors, open developer tools and navigate to the console to view all previous colors.
+
 ### Contribution
 
 If you have any suggestions on how to better optimize this app, please create PR! :)
