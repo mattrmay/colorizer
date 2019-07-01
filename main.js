@@ -62,10 +62,6 @@ function cycleColors(instructions) {
 }
 
 function cycleState(status) {
-    if(status) {
-        document.getElementById('playStatusButton').innerHTML = 'Pause';
-    } else {
-        document.getElementById('playStatusButton').innerHTML = 'Resume';
-    }
+    document.getElementById('playStatusButton').innerHTML = status ? 'Pause' : 'Resume';
     console.log(status ? "Resume" : "Pause");
 }
