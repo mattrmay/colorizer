@@ -11,15 +11,9 @@ let runState = true;
 cycleColors(runState);
 
 $(playStatusButton).click(function() {
-    if (runState === true) {
-        runState = false;
-        cycleState(runState)
-    } else {
-        runState = true;
-        cycleState(runState);
-    }
-    console.log(runState ? "Resume" : "Pause");
+    runState = !runState;
     cycleColors(runState);
+    cycleState(runState);
 });
 
 
@@ -73,4 +67,5 @@ function cycleState(status) {
     } else {
         document.getElementById('playStatusButton').innerHTML = 'Resume';
     }
+    console.log(status ? "Resume" : "Pause");
 }
