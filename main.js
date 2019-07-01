@@ -25,16 +25,14 @@ function logColor(color) {
 function randomHex() {
 
     let output = '#';
-    let hexValues = ['A','B','C','D','E','F'];
 
     for (let i = 0; i < 6; i++) {
         let r = Math.random();
 
         if (r <= 0.5) {
-            output += Math.floor(Math.random() * Math.floor(10));
+            output += Math.floor(Math.random() * 10);
         } else {
-            let l = Math.floor(Math.random() * Math.floor(6));
-            output += hexValues[l];
+            output += String.fromCharCode(Math.floor(Math.random() * (70 - 65 + 1)) + 65);
         }
     }
 
