@@ -1,4 +1,4 @@
-let defaultColor = randomHex();
+const defaultColor = randomHex();
 logColor(defaultColor);
 document.body.style.backgroundColor = defaultColor;
 
@@ -27,19 +27,12 @@ function randomHex() {
     let output = '#';
 
     for (let i = 0; i < 6; i++) {
-        let r = Math.random();
-
-        if (r <= 0.5) {
-            output += Math.floor(Math.random() * 10);
-        } else {
-            output += String.fromCharCode(Math.floor(Math.random() * (70 - 65 + 1)) + 65);
-        }
+        const r = Math.random();
+        output += r <= 0.5 ? Math.floor(Math.random() * 10) : String.fromCharCode(Math.floor(Math.random() * (70 - 65 + 1)) + 65);
     }
 
     return output;
 }
-
-
 
 function cycleColors(instructions) {
     if (instructions) {
