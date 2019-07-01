@@ -13,7 +13,7 @@ cycleColors(runState);
 $(playStatusButton).click(function() {
     runState = !runState;
     cycleColors(runState);
-    cycleState(runState);
+    updateCycleState(runState);
 });
 
 
@@ -37,22 +37,19 @@ function randomHex() {
 function cycleColors(instructions) {
     if (instructions) {
         colorShow = setInterval(function() {
-
             let nextColor = randomHex();
             logColor(nextColor);
             document.getElementById('hexColor').innerHTML = nextColor;
-
             $('body').animate({
                 'background-color': nextColor
             }, 1000);
-
         }, 2000);
     } else {
         clearInterval(colorShow)
     }
 }
 
-function cycleState(status) {
+function updateCycleState(status) {
     document.getElementById('playStatusButton').innerHTML = status ? 'Pause' : 'Resume';
     console.log(status ? "Resume" : "Pause");
 }
